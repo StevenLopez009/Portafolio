@@ -1,15 +1,15 @@
 import { Box } from "@mui/material";
 
-const Contact = () => {
+const Resume = () => {
   return (
     <Box
-      id="contact"
+      id="resume"
       sx={{ width: "70%", marginTop: "20vh", minHeight: "100vh" }}
     >
-      <h2>Contact</h2>
-      <p>Contenido Contact</p>
+      <h2>Resume</h2>
+      <p>Contenido Resume</p>
     </Box>
   );
 };
 
-export default Contact;
+export default Resume;

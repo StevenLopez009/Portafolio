@@ -1,6 +1,10 @@
-import { Box, Typography, Button, Avatar } from "@mui/material";
+import { Box, Typography, Button, Avatar, Icon, Tooltip } from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import perfilImg from "../assets/perfil.png";
-import { Icon } from "@mui/material";
 
 const Aside = () => {
   return (
@@ -9,8 +13,11 @@ const Aside = () => {
         backgroundColor: "rgb(58, 58, 58)",
         width: "20%",
         padding: 3,
-        margin: 3,
         borderRadius: 2,
+        height: "90vh",
+        position: "fixed",
+        top: 30,
+        left: 30,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -35,7 +42,7 @@ const Aside = () => {
       </Typography>
       <Box
         sx={{
-          backgroundColor: "rgb(155, 155, 155)",
+          backgroundColor: "rgb(165, 165, 165)",
           width: "100%",
           height: "5vh",
           display: "flex",
@@ -45,10 +52,43 @@ const Aside = () => {
           marginTop: "auto",
         }}
       >
-        <Icon sx={{ color: "#fff" }}>face</Icon>
-        <Icon sx={{ color: "#fff" }}>work</Icon>
-        <Icon sx={{ color: "#fff" }}>email</Icon>
-        <Icon sx={{ color: "#fff" }}>phone</Icon>
+        <a
+          href="https://www.linkedin.com/in/lpz-steven/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LinkedInIcon sx={{ color: "#fff" }} />
+        </a>
+        <InstagramIcon sx={{ color: "#fff" }} />
+        <a
+          href="https://github.com/StevenLopez009"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GitHubIcon sx={{ color: "#fff" }} />
+        </a>
+        <Tooltip
+          title={
+            <span style={{ fontSize: "1.2rem" }}>
+              stevenlopez009r@gmail.com
+            </span>
+          }
+          placement="top"
+          arrow
+        >
+          <a href="mailto:stevenlopez009r@gmail.com">
+            <EmailIcon sx={{ color: "#fff" }} />
+          </a>
+        </Tooltip>
+        <Tooltip
+          title={<span style={{ fontSize: "1.2rem" }}>3161534971</span>}
+          placement="top"
+          arrow
+        >
+          <a href="tel:+573161534971" target="_blank" rel="noopener noreferrer">
+            <PhoneAndroidIcon sx={{ color: "#fff" }} />
+          </a>
+        </Tooltip>
       </Box>
       <Button
         variant="contained"
@@ -57,6 +97,7 @@ const Aside = () => {
           background: "linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%)",
           color: "#000",
           borderRadius: 2,
+          width: "100%",
         }}
       >
         Let's Work Together
