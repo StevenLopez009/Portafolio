@@ -32,6 +32,7 @@ const Menu = () => {
           gap: 2,
           justifyContent: "space-between",
           position: "fixed",
+          zIndex: 1,
         }}
       >
         <Box
