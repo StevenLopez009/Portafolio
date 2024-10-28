@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <Box
       id="contact"
-      sx={{ width: "70%", marginTop: "20vh", minHeight: "100vh" }}
+      sx={{ width: "70%", paddingTop: "10vh", minHeight: "100vh" }}
     >
       <h2>Contact</h2>
       <p>Contenido Contact</p>

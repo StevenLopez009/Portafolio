@@ -7,7 +7,7 @@ const Home = () => {
       sx={{
         width: "100%",
         minHeight: "100vh",
-        paddingTop: "65vh",
+        paddingTop: "60vh",
       }}
     >
       <Typography
@@ -22,13 +22,15 @@ const Home = () => {
         I'm Steven López <br /> Frontend Developer
       </Typography>
       <Button
+        href="/assets/CVSTEVENLOPEZ.pdf"
+        download="CVSTEVENLOPEZ.pdf"
         sx={{
           marginTop: "20px",
           color: "#fff",
           borderRadius: 2,
         }}
       >
-        Download SV
+        Download CV
       </Button>
     </Box>
   );
