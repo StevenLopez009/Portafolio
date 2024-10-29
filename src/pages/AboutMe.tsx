@@ -10,9 +10,7 @@ const AboutMe = () => {
         minHeight: "100vh",
       }}
     >
-      <h2>
-        Turning complex problems <br /> into simple design
-      </h2>
+      <h2>About Me</h2>
 
       <Grid container spacing={2}>
         <Grid item xs={4}>
@@ -22,6 +20,7 @@ const AboutMe = () => {
               borderRadius: "20px",
               padding: 2,
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
               boxShadow: 3,
@@ -30,8 +29,11 @@ const AboutMe = () => {
               },
             }}
           >
+            <Typography variant="h3" sx={{ textAlign: "center" }}>
+              1
+            </Typography>
             <Typography variant="h6" sx={{ textAlign: "center" }}>
-              Passion for Design
+              Year of experience
             </Typography>
           </Box>
         </Grid>
@@ -41,10 +43,10 @@ const AboutMe = () => {
           <Box
             sx={{
               height: "150px",
-
               borderRadius: "20px",
               padding: 2,
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
               boxShadow: 3,
@@ -53,13 +55,15 @@ const AboutMe = () => {
               },
             }}
           >
+            <Typography variant="h3" sx={{ textAlign: "center" }}>
+              5+
+            </Typography>
             <Typography variant="h6" sx={{ textAlign: "center" }}>
-              Innovative Solutions
+              Projects
             </Typography>
           </Box>
         </Grid>
 
-        {/* Box 3 */}
         <Grid item xs={4}>
           <Box
             sx={{
@@ -76,7 +80,7 @@ const AboutMe = () => {
             }}
           >
             <Typography variant="h6" sx={{ textAlign: "center" }}>
-              Efficient Workflows
+              Focused on responsive design
             </Typography>
           </Box>
         </Grid>
@@ -98,12 +102,13 @@ const AboutMe = () => {
               },
             }}
           >
-            <Typography variant="h6" sx={{ textAlign: "justify" }}>
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not
-              only five centuries, but also the leap into electronic
-              typesetting, remaining essentially unchanged. <br />
+            <Typography
+              variant="h6"
+              sx={{ textAlign: "justify", fontFamily: "cursive" }}
+            >
+              Apasionado por el diseño centrado en el usuario, creo interfaces
+              que no solo son atractivas, sino también intuitivas y accesibles{" "}
+              <br />
               <Button
                 href="/assets/CVSTEVENLOPEZ.pdf"
                 download="CVSTEVENLOPEZ.pdf"

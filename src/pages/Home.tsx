@@ -1,6 +1,10 @@
 import { Box, Button, Typography } from "@mui/material";
+import useTypingEffect from "../components/UseTipyngEffect";
+// Asegúrate de que la ruta sea correcta
 
 const Home = () => {
+  const typedText = useTypingEffect("Frontend Developer", 150);
+
   return (
     <Box
       id="home"
@@ -19,7 +23,7 @@ const Home = () => {
           fontFamily: "Roboto, sans-serif",
         }}
       >
-        I'm Steven López <br /> Frontend Developer
+        I'm Steven López <br /> {typedText}
       </Typography>
       <Button
         href="/assets/CVSTEVENLOPEZ.pdf"

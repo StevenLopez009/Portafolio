@@ -2,8 +2,8 @@ import { Box, Button } from "@mui/material";
 import Home from "./Home";
 import Portafolio from "./Portafolio";
 import AboutMe from "./AboutMe";
-import Contact from "./Contact";
 import Resume from "./Resume";
+import Tools from "./Tools";
 
 const Menu = () => {
   const handleScroll = (sectionId: string) => {
@@ -59,11 +59,8 @@ const Menu = () => {
           >
             Resume
           </Button>
-          <Button
-            sx={{ color: "white" }}
-            onClick={() => handleScroll("contact")}
-          >
-            Contact
+          <Button sx={{ color: "white" }} onClick={() => handleScroll("tools")}>
+            Tools
           </Button>
         </Box>
         <Button
@@ -83,7 +80,7 @@ const Menu = () => {
       <Portafolio />
       <AboutMe />
       <Resume />
-      <Contact />
+      <Tools />
     </Box>
   );
 };
