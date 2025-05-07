@@ -4,7 +4,6 @@ import useTypingEffect from "../components/UseTipyngEffect";
 
 const Home = () => {
   const typedText = useTypingEffect("Frontend Developer", 150);
-
   return (
     <Box
       id="home"

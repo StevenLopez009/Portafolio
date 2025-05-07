@@ -30,10 +30,10 @@ const AboutMe = () => {
             }}
           >
             <Typography variant="h3" sx={{ textAlign: "center" }}>
-              1
+              2
             </Typography>
             <Typography variant="h6" sx={{ textAlign: "center" }}>
-              Year of experience
+              Years of experience
             </Typography>
           </Box>
         </Grid>
@@ -106,8 +106,9 @@ const AboutMe = () => {
               variant="h6"
               sx={{ textAlign: "justify", fontFamily: "cursive" }}
             >
-              Apasionado por el diseño centrado en el usuario, creo interfaces
-              que no solo son atractivas, sino también intuitivas y accesibles{" "}
+              Specialized in building scalable web applications using React, Vite, 
+              and modern tools from the JavaScript ecosystem. Strong attention to detail, 
+              performance, and code maintainability.
               <br />
               <Button
                 href="/assets/CVSTEVENLOPEZ.pdf"
@@ -146,7 +147,7 @@ const AboutMe = () => {
               >
                 Name:
               </Box>
-              <br /> Steven Lopez Mancera
+              <br /> Steven López Mancera
               <br />
               <Box
                 component="span"
@@ -154,7 +155,7 @@ const AboutMe = () => {
               >
                 Phone:
               </Box>
-              <br /> 3161534971
+              <br /> +57 316 153 4971
               <br />
               <Box
                 component="span"
@@ -170,7 +171,7 @@ const AboutMe = () => {
               >
                 Location:
               </Box>
-              <br /> Madrid, Cundinamarca
+              <br /> Bogotá
             </Typography>
           </Box>
         </Grid>
