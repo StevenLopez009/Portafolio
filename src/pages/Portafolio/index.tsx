@@ -10,26 +10,87 @@ const Portafolio = () => {
   
 
   return (
-    <Box
-      id="portfolio"
-      sx={{ width: "100%", minHeight: "100vh", paddingTop: "10vh" }}
-    >
-      <Grid container sx={{ height: "90vh", padding: 1 }}>
-        <Grid item xs={8} sx={{ height: "100%", paddingRight: 1 }}>
-          <Grid container direction="column" sx={{ height: "100%" }}>
-            <Grid item sx={{ flex: 1, paddingBottom: 1 }}>
-              <ProjectCard image={trabajo1} label="REACT" url="https://airplanes-jy0ifa198-stevens-projects-6b1ecd0d.vercel.app/"/>
-            </Grid>
-            <Grid item sx={{ flex: 1, paddingBottom: 1 }}>
-              <ProjectCard image={trabajo3} label="REACT" url="https://airplanes-jy0ifa198-stevens-projects-6b1ecd0d.vercel.app/"/>
+    <Box id="portfolio" sx={{ minHeight: "100vh", paddingTop: "10vh" }}>
+      <Grid container spacing={2} sx={{ minHeight: "90vh", px: 2 }}>
+        <Grid item  md={8} sx={{ display: { xs: "none", md: "block" }, minHeight: "90vh", px: 2,  }}
+        >
+         <Grid container direction="column" spacing={2} sx={{ height: '100%' }}>
+         <Grid item sx={{ flex: 1 }}>
+            <ProjectCard
+                image={trabajo1}
+                label="REACT"
+                url="https://airplanes-jy0ifa198-stevens-projects-6b1ecd0d.vercel.app/"
+              />
             </Grid>
             <Grid item sx={{ flex: 1 }}>
-              <ProjectCard image={trabajo4} label="REACT" url="https://airplanes-jy0ifa198-stevens-projects-6b1ecd0d.vercel.app/"/>
+              <ProjectCard
+                image={trabajo3}
+                label="REACT"
+                url="https://airplanes-jy0ifa198-stevens-projects-6b1ecd0d.vercel.app/"
+              />
+            </Grid>
+            <Grid item sx={{ flex: 1 }}>
+              <ProjectCard
+                image={trabajo4}
+                label="REACT"
+                url="https://airplanes-jy0ifa198-stevens-projects-6b1ecd0d.vercel.app/"
+              />
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={4} sx={{ height: "100%", paddingLeft: 1 }}>
-          <ProjectCard image={trabajo2} label="REACT" url="https://airplanes-jy0ifa198-stevens-projects-6b1ecd0d.vercel.app/"/>
+
+        <Grid item md={4} sx={{ display: { xs: "none", md: "block" } }} >
+          <ProjectCard
+            image={trabajo2}
+            label="REACT"
+            url="https://airplanes-jy0ifa198-stevens-projects-6b1ecd0d.vercel.app/"
+          />
+        </Grid>
+
+        {/* Vista MÓVIL (xs) */}
+        <Grid
+          item
+          xs={12}
+          sx={{ display: { xs: "block", md: "none" } }}
+        >
+          <ProjectCard
+            image={trabajo1}
+            label="REACT"
+            url="https://airplanes-jy0ifa198-stevens-projects-6b1ecd0d.vercel.app/"
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sx={{ display: { xs: "block", md: "none" } }}
+        >
+          <ProjectCard
+            image={trabajo2}
+            label="REACT"
+            url="https://airplanes-jy0ifa198-stevens-projects-6b1ecd0d.vercel.app/"
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sx={{ display: { xs: "block", md: "none" } }}
+        >
+          <ProjectCard
+            image={trabajo3}
+            label="REACT"
+            url="https://airplanes-jy0ifa198-stevens-projects-6b1ecd0d.vercel.app/"
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sx={{ display: { xs: "block", md: "none" } }}
+        >
+          <ProjectCard
+            image={trabajo4}
+            label="REACT"
+            url="https://airplanes-jy0ifa198-stevens-projects-6b1ecd0d.vercel.app/"
+          />
         </Grid>
       </Grid>
     </Box>

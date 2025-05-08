@@ -16,11 +16,9 @@ const Menu = () => {
   return (
     <Box
       sx={{
-        width: "100%",
+        width: "95%",
         padding: 3,
-        margin: 3,
-        marginLeft: "25%",
-        borderRadius: 2,
+        marginLeft:{ xs: "0", md: "25%" },
         display: "flex",
         flexDirection: "column",
         gap: 2,
@@ -37,7 +35,7 @@ const Menu = () => {
       >
         <Box
           sx={{
-            display: "flex",
+            display:{ xs: "none", md: "flex" },
             gap: 2,
           }}
         >

@@ -5,7 +5,7 @@ const AboutMe = () => {
     <Box
       id="about"
       sx={{
-        width: "100%",
+        width: "95%",
         paddingTop: "10vh",
         minHeight: "100vh",
       }}

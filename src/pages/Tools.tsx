@@ -12,7 +12,7 @@ const Tools = () => {
   return (
     <Box
       id="tools"
-      sx={{ width: "100%", paddingTop: "10vh", minHeight: "100vh" }}
+      sx={{ width: "95%", paddingTop: "10vh", minHeight: "100vh" }}
     >
       <h2>Tools</h2>
       <Grid container spacing={0}>

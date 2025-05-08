@@ -6,7 +6,8 @@
   --border-radius: 20px;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -20,16 +21,7 @@ html, body {
 
 .principal {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: 100vh;
   width: 95vw;
 }
-
-
-
-.menu {
-  background-color: aqua;
-  width: 70%;
-}
-
-

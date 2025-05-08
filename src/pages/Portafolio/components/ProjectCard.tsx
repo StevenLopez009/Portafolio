@@ -19,6 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, label, url }) => {
       }
       sx={{
         height: "100%",
+        width: "100%",
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         backgroundPosition: "top",

@@ -1,5 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
-import useTypingEffect from "../components/UseTipyngEffect";
+import useTypingEffect from "../components/useTipyngEffect";
+
 // Asegúrate de que la ruta sea correcta
 
 const Home = () => {
@@ -8,9 +9,9 @@ const Home = () => {
     <Box
       id="home"
       sx={{
-        width: "100%",
         minHeight: "100vh",
         paddingTop: "60vh",
+        height: { xs: "40vh", md: "90vh" },
       }}
     >
       <Typography

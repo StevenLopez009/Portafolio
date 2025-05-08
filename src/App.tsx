@@ -4,10 +4,13 @@ import Menu from "./pages/Menu";
 
 function App() {
   return (
-    <div className="principal">
+    <>
       <Aside />
-      <Menu />
-    </div>
+      <div className="principal">
+        <Menu />
+      </div>
+    </>
+   
   );
 }
 
