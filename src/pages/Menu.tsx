@@ -61,18 +61,7 @@ const Menu = () => {
             Tools
           </Button>
         </Box>
-        <Button
-          sx={{
-            position: "fixed",
-            top: 60,
-            right: 60,
-            background: "linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%)",
-            color: "#000",
-            borderRadius: 2,
-          }}
-        >
-          Lets Talk
-        </Button>
+        
       </Box>
       <Home />
       <Portafolio />

@@ -1,17 +1,19 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, useMediaQuery, useTheme } from "@mui/material";
 import useTypingEffect from "../components/useTipyngEffect";
 
 // Asegúrate de que la ruta sea correcta
 
 const Home = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const typedText = useTypingEffect("Frontend Developer", 150);
+
   return (
     <Box
       id="home"
       sx={{
-        minHeight: "100vh",
-        paddingTop: "60vh",
-        height: { xs: "40vh", md: "90vh" },
+        paddingTop: isMobile ? "20vh" : "60vh",
+        height: { xs: "80vh", md: "90vh" },
       }}
     >
       <Typography

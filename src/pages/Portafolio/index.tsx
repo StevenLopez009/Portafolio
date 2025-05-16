@@ -8,7 +8,6 @@ import ProjectCard from "./components/ProjectCard";
 
 const Portafolio = () => {
   
-
   return (
     <Box id="portfolio" sx={{ minHeight: "100vh", paddingTop: "10vh" }}>
       <Grid container spacing={2} sx={{ minHeight: "90vh", px: 2 }}>

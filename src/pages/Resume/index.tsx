@@ -13,7 +13,7 @@ import TableExperience from "./components/TableExperience";
 
 const Resume = () => {
   return (
-    <Box id="resume" sx={{ width: "95%", minHeight: "100vh" }}>
+    <Box id="resume" sx={{ width: "95%", minHeight: "auto",  paddingTop: "10vh" }}>
       <Typography
         variant="h5"
         sx={{ color: "white", marginTop: "10vh", marginBottom: "2vh" }}

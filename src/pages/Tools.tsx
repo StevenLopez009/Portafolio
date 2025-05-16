@@ -8,284 +8,66 @@ import git from "../assets/git.png";
 import html from "../assets/html.webp";
 import css from "../assets/css.png";
 
+const tools = [
+  { name: "React", src: react },
+  { name: "JavaScript", src: js },
+  { name: "TypeScript", src: ts },
+  { name: "GraphQL", src: graphql },
+  { name: "Node", src: node },
+  { name: "HTML", src: html },
+  { name: "CSS", src: css },
+  { name: "Git", src: git },
+];
+
 const Tools = () => {
   return (
     <Box
       id="tools"
-      sx={{ width: "95%", paddingTop: "10vh", minHeight: "100vh" }}
+      sx={{ width: "95%", paddingTop: "10vh", minHeight: "100vh", margin: "0 auto" }}
     >
-      <h2>Tools</h2>
-      <Grid container spacing={0}>
-        <Grid item xs={2.4}>
-          <Box
-            sx={{
-              height: "200px",
-              width: "100%",
-              borderRadius: "20px",
-              padding: 1,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: 3,
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
+      <Typography variant="h4" gutterBottom>
+        Tools
+      </Typography>
+      <Grid container spacing={2}>
+        {tools.map((tool) => (
+          <Grid key={tool.name} item xs={6} sm={4} md={2.4}>
             <Box
-              component="img"
-              src={react}
-              alt="React Logo"
               sx={{
-                height: "80px",
-                width: "auto",
-                marginBottom: "8px",
-                borderRadius: "10px",
+                height: "200px",
+                borderRadius: "20px",
+                padding: 1,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                boxShadow: 3,
+                transition: "transform 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                },
               }}
-            />
-            <Typography variant="subtitle1" align="center">
-              React
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={2.4}>
-          <Box
-            sx={{
-              height: "200px",
-              width: "100%",
-              borderRadius: "20px",
-              padding: 1,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: 3,
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
-            <Box
-              component="img"
-              src={js}
-              alt="React Logo"
-              sx={{
-                height: "80px",
-                width: "auto",
-                marginBottom: "8px",
-                borderRadius: "10px",
-              }}
-            />
-            <Typography variant="subtitle1" align="center">
-              Javascript
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={2.4}>
-          <Box
-            sx={{
-              height: "200px",
-              width: "100%",
-              borderRadius: "20px",
-              padding: 1,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: 3,
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
-            <Box
-              component="img"
-              src={ts}
-              alt="React Logo"
-              sx={{
-                height: "80px",
-                width: "auto",
-                marginBottom: "8px",
-                borderRadius: "10px",
-              }}
-            />
-            <Typography variant="subtitle1" align="center">
-              Typescript
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={2.4}>
-          <Box
-            sx={{
-              height: "200px",
-              width: "100%",
-              borderRadius: "20px",
-              padding: 1,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: 3,
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
-            <Box
-              component="img"
-              src={graphql}
-              alt="React Logo"
-              sx={{
-                height: "80px",
-                width: "auto",
-                marginBottom: "8px",
-                borderRadius: "10px",
-              }}
-            />
-            <Typography variant="subtitle1" align="center">
-              GraphQl
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={2.4}>
-          <Box
-            sx={{
-              height: "200px",
-              width: "100%",
-              borderRadius: "20px",
-              padding: 1,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: 3,
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
-            <Box
-              component="img"
-              src={node}
-              alt="React Logo"
-              sx={{
-                height: "80px",
-                width: "auto",
-                marginBottom: "8px",
-                borderRadius: "10px",
-              }}
-            />
-            <Typography variant="subtitle1" align="center">
-              Node
-            </Typography>
-          </Box>
-        </Grid>
-      </Grid>
-
-      <Grid container spacing={0} sx={{ marginTop: 2 }}>
-        <Grid item xs={2.4}>
-          <Box
-            sx={{
-              height: "200px",
-              width: "100%",
-              borderRadius: "20px",
-              padding: 1,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: 3,
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
-            <Box
-              component="img"
-              src={html}
-              alt="React Logo"
-              sx={{
-                height: "80px",
-                width: "auto",
-                marginBottom: "8px",
-                borderRadius: "10px",
-              }}
-            />
-            <Typography variant="subtitle1" align="center">
-              Html
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={2.4}>
-          <Box
-            sx={{
-              height: "200px",
-              width: "100%",
-              borderRadius: "20px",
-              padding: 1,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: 3,
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
-            <Box
-              component="img"
-              src={css}
-              alt="React Logo"
-              sx={{
-                height: "80px",
-                width: "auto",
-                marginBottom: "8px",
-                borderRadius: "10px",
-              }}
-            />
-            <Typography variant="subtitle1" align="center">
-              Css
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={2.4}>
-          <Box
-            sx={{
-              height: "200px",
-              width: "100%",
-              borderRadius: "20px",
-              padding: 1,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: 3,
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
-            <Box
-              component="img"
-              src={git}
-              alt="React Logo"
-              sx={{
-                height: "80px",
-                width: "auto",
-                marginBottom: "8px",
-                borderRadius: "10px",
-              }}
-            />
-            <Typography variant="subtitle1" align="center">
-              Git
-            </Typography>
-          </Box>
-        </Grid>
+            >
+              <Box
+                component="img"
+                src={tool.src}
+                alt={`${tool.name} Logo`}
+                sx={{
+                  height: "80px",
+                  width: "auto",
+                  marginBottom: "8px",
+                  borderRadius: "10px",
+                }}
+              />
+              <Typography variant="subtitle1" align="center">
+                {tool.name}
+              </Typography>
+            </Box>
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );
 };
 
 export default Tools;
+

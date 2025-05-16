@@ -7,101 +7,41 @@ const AboutMe = () => {
       sx={{
         width: "95%",
         paddingTop: "10vh",
-        minHeight: "100vh",
+        minHeight: "auto",
+        margin: "0 auto",
       }}
     >
-      <h2>About Me</h2>
+      <Typography variant="h4" gutterBottom>
+        About Me
+      </Typography>
 
+      {/* Primera fila en desktop / primera y segunda fila en mobile */}
       <Grid container spacing={2}>
-        <Grid item xs={4}>
-          <Box
-            sx={{
-              height: "150px",
-              borderRadius: "20px",
-              padding: 2,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: 3,
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
-            <Typography variant="h3" sx={{ textAlign: "center" }}>
-              2
-            </Typography>
-            <Typography variant="h6" sx={{ textAlign: "center" }}>
-              Years of experience
-            </Typography>
+        <Grid item xs={6} md={4}>
+          <Box sx={cardStyle}>
+            <Typography variant="h3" textAlign="center">2</Typography>
+            <Typography variant="h6" textAlign="center">Years of experience</Typography>
           </Box>
         </Grid>
 
-        {/* Box 2 */}
-        <Grid item xs={4}>
-          <Box
-            sx={{
-              height: "150px",
-              borderRadius: "20px",
-              padding: 2,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: 3,
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
-            <Typography variant="h3" sx={{ textAlign: "center" }}>
-              5+
-            </Typography>
-            <Typography variant="h6" sx={{ textAlign: "center" }}>
-              Projects
-            </Typography>
+        <Grid item xs={6} md={4}>
+          <Box sx={cardStyle}>
+            <Typography variant="h3" textAlign="center">5+</Typography>
+            <Typography variant="h6" textAlign="center">Projects</Typography>
           </Box>
         </Grid>
 
-        <Grid item xs={4}>
-          <Box
-            sx={{
-              height: "150px",
-              borderRadius: "20px",
-              padding: 2,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: 3,
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
-            <Typography variant="h6" sx={{ textAlign: "center" }}>
+        <Grid item xs={12} md={4}>
+          <Box sx={cardStyle}>
+            <Typography variant="h6" textAlign="center">
               Focused on responsive design
             </Typography>
           </Box>
         </Grid>
-      </Grid>
-      <Grid container spacing={2}>
-        <Grid item xs={8}>
-          <Box
-            sx={{
-              marginTop: "20px",
-              height: "300px",
-              borderRadius: "20px",
-              padding: 2,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: 3,
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
+
+        {/* Segunda fila desktop / tercera fila móvil */}
+        <Grid item xs={12} md={8}>
+          <Box sx={{ ...cardStyle, height: "300px", marginTop: 2 }}>
             <Typography
               variant="h6"
               sx={{ textAlign: "justify", fontFamily: "cursive" }}
@@ -124,53 +64,20 @@ const AboutMe = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={4}>
-          <Box
-            sx={{
-              marginTop: "20px",
-              height: "300px",
-              borderRadius: "20px",
-              padding: 2,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: 3,
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
-            <Typography variant="h6" sx={{ textAlign: "left" }}>
-              <Box
-                component="span"
-                sx={{ fontSize: "0.8rem", fontWeight: "bold" }}
-              >
-                Name:
-              </Box>
+
+        <Grid item xs={12} md={4}>
+          <Box sx={{ ...cardStyle, height: "300px", marginTop: 2 }}>
+            <Typography variant="h6" textAlign="left">
+              <Box component="span" sx={labelStyle}>Name:</Box>
               <br /> Steven López Mancera
               <br />
-              <Box
-                component="span"
-                sx={{ fontSize: "0.8rem", fontWeight: "bold" }}
-              >
-                Phone:
-              </Box>
+              <Box component="span" sx={labelStyle}>Phone:</Box>
               <br /> +57 316 153 4971
               <br />
-              <Box
-                component="span"
-                sx={{ fontSize: "0.8rem", fontWeight: "bold" }}
-              >
-                Email:
-              </Box>
+              <Box component="span" sx={labelStyle}>Email:</Box>
               <br /> stevenlopez009r@gmail.com
               <br />
-              <Box
-                component="span"
-                sx={{ fontSize: "0.8rem", fontWeight: "bold" }}
-              >
-                Location:
-              </Box>
+              <Box component="span" sx={labelStyle}>Location:</Box>
               <br /> Bogotá
             </Typography>
           </Box>
@@ -178,6 +85,27 @@ const AboutMe = () => {
       </Grid>
     </Box>
   );
+};
+
+// Estilos reutilizables
+const cardStyle = {
+  height: "150px",
+  borderRadius: "20px",
+  padding: 2,
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  boxShadow: 3,
+  transition: "transform 0.3s ease",
+  "&:hover": {
+    transform: "scale(1.05)",
+  },
+};
+
+const labelStyle = {
+  fontSize: "0.8rem",
+  fontWeight: "bold",
 };
 
 export default AboutMe;

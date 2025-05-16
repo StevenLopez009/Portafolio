@@ -8,33 +8,43 @@ import {
   useTheme,
 } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import perfilImg from "../assets/perfil.png";
 
 const Aside = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box
       sx={{
         backgroundColor: "rgb(58, 58, 58)",
         padding: 3,
         borderRadius: 2,
-        position: "fixed",
-        top: 30,
-        left: { xs: "50%", md: 30 },
-        transform: { xs: "translateX(-50%)", md: "none" },
+        position: isMobile ? "static" : "fixed",
+        ...(isMobile
+          ? {
+              mt: 40, 
+              mx: 2, 
+            }
+          : {
+              top: 30,
+              left: 30,
+              transform: "translateX(0)",
+            }),
         display: "flex",
         flexDirection: { xs: "row", md: "column" },
         alignItems: "center",
         justifyContent: "center",
         gap: 2,
         width: { xs: "90%", md: "20%" },
-        height: { xs: "40vh", md: "90vh" },
+        height: { xs: "auto", md: "90vh" },
         zIndex: 1000,
       }}
     >
+
       <Avatar
         src={perfilImg}
         alt="Perfil"
@@ -82,7 +92,6 @@ const Aside = () => {
           >
             <LinkedInIcon sx={{ color: "#fff" }} />
           </a>
-          <InstagramIcon sx={{ color: "#fff" }} />
           <a
             href="https://github.com/StevenLopez009"
             target="_blank"
